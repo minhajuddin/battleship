@@ -21,6 +21,13 @@ defmodule Play do
     board
     |> Board.place_ship(oil)
     |> Board.place_ship(freighter)
+    |> Board.place_ship(Ship.new([
+      Coord.new(8, 6),
+      Coord.new(8, 7),
+      Coord.new(8, 8),
+      Coord.new(8, 9),
+      Coord.new(9, 9),
+    ]))
     |> Board.draw()
   end
 end
